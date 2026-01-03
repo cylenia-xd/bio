@@ -1,9 +1,15 @@
-html, body {
+/* ===========================
+   Base document & variables
+   =========================== */
+
+html,
+body {
   height: 100vh;
   margin: 0;
   touch-action: none;
 }
 
+/* Theme variables */
 :root {
   --bg: #11111b;
   --window-bg: #1e1e2e;
@@ -14,8 +20,17 @@ html, body {
   --link-padding: 8px 12px;
 }
 
-/* use border-box everywhere to simplify sizing calculations */
-*, *::before, *::after { box-sizing: border-box; }
+/* Use border-box everywhere to simplify sizing calculations */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* ===========================
+   Layout & containers
+   =========================== */
 
 body {
   display: flex;
@@ -24,6 +39,7 @@ body {
   font-family: var(--font);
 }
 
+/* Main window/card container */
 .window {
   background: var(--window-bg);
   border: solid 2px var(--accent);
@@ -32,10 +48,42 @@ body {
   padding: 24px 16px;
 }
 
+/* Extra main wrapper spacing if needed */
 .main {
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
+
+/* Main content grows to fill viewport height */
+main {
+  flex: 1;
+  min-height: 0;
+}
+
+/* Footer styling */
+footer.window {
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+/* ===========================
+   Typography & headings
+   =========================== */
+
+h1 {
+  margin-top: 0;
+}
+
+
+/* ===========================
+   Navbar
+   =========================== */
 
 nav.navbar {
   display: flex;
@@ -55,10 +103,13 @@ nav.navbar ul {
   justify-content: center;
 }
 
-nav.navbar li { display: flex; }
+nav.navbar li {
+  display: flex;
+}
 
+/* Buttons in navbar and links in link-sections share the same base button styles */
 nav.navbar button,
-#links a {
+.link-section a {
   margin: 0;
   color: var(--accent);
   background: transparent;
@@ -70,41 +121,25 @@ nav.navbar button,
   text-decoration: none;
 }
 
+/* Navbar buttons specifically */
 nav.navbar button {
   padding: var(--btn-padding);
   font-size: 14px;
 }
 
-#links a {
-  padding: var(--link-padding);
-  display: inline-block;
-}
-
+/* Active state for nav buttons and link buttons */
 nav.navbar button.active,
-#links a.active {
+.link-section a.active {
   background: var(--accent);
   color: var(--accent-text);
 }
 
-main {
-  flex: 1;
-  min-height: 0;
-}
 
-footer.window {
-  text-align: center;
-  padding: 12px 16px;
-  font-size: 0.9rem;
-}
+/* ===========================
+   Sections (tab content)
+   =========================== */
 
-footer p {
-  margin: 0;
-}
-
-h1 {
-  margin-top: 0;
-}
-
+/* Hidden by default, shown when data-active="true" */
 section {
   opacity: 0;
   pointer-events: none;
@@ -119,39 +154,50 @@ section[data-active="true"] {
   height: auto;
 }
 
-#links ul {
+
+/* ===========================
+   Link sections
+   =========================== */
+
+.link-section ul {
   list-style: none;
   margin: 12px 0 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  /* Creates 2 columns where BOTH columns match width of the widest button */
+  grid-template-columns: repeat(2, minmax(max-content, max-content));
   gap: 8px;
-  align-items: start;
-  justify-content: start;
 }
 
-#links ul li {
-  width: 100%;
+.link-section ul li {
+  width: auto; /* Let each li size to its content */
 }
 
-#links a {
+.link-section a {
+  display: block; /* Block so anchor defines the grid cell width */
+  padding: var(--link-padding);
   box-sizing: border-box;
-  width: auto;
 }
 
-#links a:hover,
-#links a:focus {
+/* Hover/focus/active states */
+.link-section a:hover,
+.link-section a:focus {
   background: #cba6f7;
   color: #181825;
   outline: none;
 }
 
-#links a:active {
+.link-section a:active {
   transform: translateY(1px);
 }
 
-/* Mobile styles (overrides) */
+
+/* ===========================
+   Mobile styles (overrides)
+   =========================== */
+
 @media (max-width: 600px) {
+  /* Prevent scrolling/jank on very small devices */
   body {
     overflow: hidden;
     position: fixed;
@@ -162,20 +208,21 @@ section[data-active="true"] {
     margin: 8px;
     padding: 16px 12px;
   }
-  
+
   nav.navbar {
     padding: 4px;
   }
-  
+
   nav.navbar ul {
     gap: 4px;
   }
-  
+
   nav.navbar button {
     padding: 6px 12px;
     font-size: 13px;
   }
 
+  /* Hide any numeric nav labels on mobile if desired */
   .nav-num {
     display: none;
   }
@@ -183,20 +230,20 @@ section[data-active="true"] {
   h1 {
     font-size: 1.5rem;
   }
-  
+
   p {
     font-size: 0.9rem;
     line-height: 1.5;
   }
 
-  #links a {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 8px 12px;
+  /* On mobile: single column, full-width buttons */
+  .link-section ul {
+    grid-template-columns: 1fr; /* Single full-width column */
   }
 
-  #links ul {
-    grid-template-columns: 1fr;
+  .link-section a {
+    width: 100%;
+    padding: 8px 12px;
   }
 
   .mobilehidden {
