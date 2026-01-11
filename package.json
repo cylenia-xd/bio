@@ -1,0 +1,17 @@
+{
+  "name": "eleventy-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve"
+  },
+  "keywords": [],
+  "author": "Cylenia",
+  "license": "GPL-3.0",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

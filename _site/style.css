@@ -1,0 +1,25 @@
+* {
+  font-family: monospace;
+  background-color: #1e1e2e;
+  color: #cba6f7;
+}
+
+body {
+  margin-left: 20%;
+  margin-right: 20%;
+  border: solid #cba6f7 2px;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 40;
+}
+
+h2 {
+  font-size: 32;
+}
+
+p,
+li {
+  font-size: 24;
+}
