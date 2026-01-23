@@ -22,7 +22,7 @@ Most of my work is pretty silly, but sometimes I make stuff that people might ac
 If you have any opportunities for employment I'd love to chat!
 
 I use **NixOS** as my main operating system on both my home server and desktop computer.\
-You can find my configuration (as well as this site kekw) publicly available on [Codeberg](https://codeberg.org/cylenia/nixos).
+You can find my configuration (as well as this site kekw) publicly available on [Github](https://github.com/cylenia-xd/nixos).
 
 ---
 
@@ -61,7 +61,7 @@ Outside of programming and systems administration, I enjoy:
 
 Here are some links to my other profiles! Check them out:
 
-- [Codeberg](https://codeberg.org/cylenia)
+- [Github](https://github.com/cylenia-xd)
 - [Discord](https://discord.com/users/1105543904520044594)
 - [Minecraft](https://namemc.com/profile/Cylenia)
 - [Email](mailto:me@cylenia.dev)
