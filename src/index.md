@@ -15,14 +15,17 @@
 ## Home
 
 Hello! I'm **Cylenia**.\
-I'm a trans-girl with a passion for systems administration and programming.\
-From Linux to web development, I love exploring different areas of technology.
+I'm a trans-girl with a passion for **systems administration** and **programming**.\
+From **Linux** to **web development**, I love exploring different areas of technology.
 
 Most of my work is pretty silly, but sometimes I make stuff that people might actually use!\
 If you have any opportunities for employment I'd love to chat!
 
 I use **NixOS** as my main operating system on both my home server and desktop computer.\
-You can find my configuration (as well as this site kekw) publicly available on [Github](https://github.com/cylenia-xd/nixos).
+You can find my configuration (as well as this site) publicly available on [Github](https://github.com/cylenia-xd/nixos).
+
+This website is served using **Eleventy**, and is automatically updated on a `git push` using **Webhooks**.\
+This message was written as a test of this system, but I will keep it here.
 
 ---
 
