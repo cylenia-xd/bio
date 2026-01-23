@@ -24,8 +24,7 @@ If you have any opportunities for employment I'd love to chat!
 I use **NixOS** as my main operating system on both my home server and desktop computer.\
 You can find my configuration (as well as this site) publicly available on [Github](https://github.com/cylenia-xd/nixos).
 
-This website is served using **Eleventy**, and is automatically updated on a `git push` using **Webhooks**.\
-This message was written as a test of this system, but I will keep it here.
+This website is served with **Markdown** using **Eleventy**, and is styled using **CSS**.
 
 ---
 
