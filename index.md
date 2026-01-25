@@ -1,12 +1,6 @@
-<meta name="description" content="Welcome to my little corner of the internet :3">
-<meta property="og:title" content="Cylenia's Site">
-<meta property="og:description" content="Welcome to my little corner of the internet :3">
-<meta property="og:image" content="https://cylenia.dev/preview.png">
-<meta property="og:url" content="https://cylenia.dev">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="/style.css">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+---
+layout: default.liquid
+---
 
 # Cylenia
 
