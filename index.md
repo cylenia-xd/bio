@@ -18,7 +18,8 @@ If you have any opportunities for employment I'd love to chat!
 I use **NixOS** as my main operating system on both my home server and desktop computer.\
 You can find my configuration (as well as this site) publicly available on [Github](https://github.com/cylenia-xd/nixos).
 
-This website is served with **Markdown** using **Eleventy**, and is styled using **CSS**.
+This website is served with **Markdown** using **Cobalt**, and is styled using **CSS**.\
+It is built using a **Nix** derivation that you can see on the **Github** repo.
 
 ---
 
