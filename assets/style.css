@@ -1,25 +1,40 @@
-* {
-  font-family: monospace;
-  background-color: #1e1e2e;
-  color: #cba6f7;
+:root {
+  --background-color: #1e1e2e;
+  --main-color: #cba6f7;
+  --text-color: #cdd6f4;
 }
 
 body {
+  font-family: monospace;
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin-left: 20%;
   margin-right: 20%;
-  border: solid #cba6f7 2px;
+  border: solid var(--main-color) 2px;
   padding: 10px;
 }
 
 h1 {
-  font-size: 40;
+  font-size: 2.5rem;
+  color: var(--main-color);
 }
 
 h2 {
-  font-size: 32;
+  font-size: 2rem;
+  color: var(--main-color);
 }
 
 p,
 li {
-  font-size: 24;
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--main-color);
+  text-decoration: underline;
 }

@@ -42,15 +42,24 @@ I use a variety of tools, software and operating systems, so here's a list of my
 
 ## Interests
 
-Outside of programming and systems administration, I enjoy:
+In any free time I can get my hands on, I enjoy:
 
-- Playing Minecraft and GTA
+- Playing Minecraft
 - Cycling
 - Shopping
-- Sleeping
+- Programming
 - Studying mathematics and physics
 - Working on my NixOS configuration
 - Self-hosting
+
+---
+
+## Projects
+
+Here are some of my projects. Check them out:
+
+- [nixos](https://github.com/cylenia-xd/nixos) - My NixOS configuration for my computers.
+- [bio](https://github.com/cylenia-xd/bio) - The very website you are on right now.
 
 ---
 
