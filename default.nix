@@ -5,9 +5,15 @@ pkgs.stdenv.mkDerivation {
   version = "1.0.0";
   src = ./.;
 
+  buildInputs = [ pkgs.bun ];
+
+  buildPhase = ''
+    bun build index.js --outdir dist --minify
+  '';
+
   installPhase = ''
-    mkdir -p $out/public
-    cp -r public/* $out/public/
-    cp index.js $out/
+    mkdir -p $out
+    cp -r dist/* $out/
+    cp -r public $out/public
   '';
 }
