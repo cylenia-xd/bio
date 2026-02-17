@@ -8,7 +8,11 @@ pkgs.stdenv.mkDerivation {
   buildInputs = [ pkgs.bun ];
 
   buildPhase = ''
-    bun build index.js --outdir dist --minify
+    bun install --no-cache --production
+    bun build index.js \
+      --outdir dist \
+      --minify \
+      --target bun
   '';
 
   installPhase = ''
