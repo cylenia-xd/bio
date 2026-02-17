@@ -8,6 +8,6 @@ pkgs.stdenv.mkDerivation {
   installPhase = ''
     mkdir -p $out/public
     cp -r public/* $out/public/
-    cp server.js $out/
+    cp index.js $out/
   '';
 }
