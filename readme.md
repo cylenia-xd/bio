@@ -1,4 +1,4 @@
 # bio
 
-This is my personal website, built with the static site generator [Cobalt](https://cobalt-org.github.io).\
+This is my personal website, a static (HTML+CSS) page served with Bun using the Elysia webserver.\
 Check it out live [here!](https://www.cylenia.dev)
