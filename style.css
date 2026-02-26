@@ -1,40 +1,70 @@
-:root {
-  --background-color: #1e1e2e;
-  --main-color: #cba6f7;
-  --text-color: #cdd6f4;
+body {
+  background-color: #1e1e2e;
+  margin: 0;
+  padding: 1.5rem;
+  font-family: monospace;
+  color: #cba6f7;
 }
 
-body {
-  font-family: monospace;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  margin-left: 20%;
-  margin-right: 20%;
-  border: solid var(--main-color) 2px;
-  padding: 10px;
+.container {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: var(--main-color);
+  font-size: 3rem;
+  text-align: center;
 }
 
 h2 {
   font-size: 2rem;
-  color: var(--main-color);
+  text-align: center;
 }
 
-p,
-li {
-  font-size: 1.25rem;
+p {
+  font-size: 1rem;
 }
 
-a {
-  color: var(--main-color);
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.links > a {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 2px solid #cba6f7;
+  border-radius: 1rem;
   text-decoration: none;
+  transition: transform 0.15s ease, color 0.15s ease, background-color 0.15s ease;
 }
 
-a:hover {
-  color: var(--main-color);
-  text-decoration: underline;
+.links > a:link,
+.links > a:visited,
+.links > a:active {
+  color: #cba6f7;
+}
+
+.links > a:hover {
+  color: #1e1e2e;
+  background-color: #cba6f7;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .links > a {
+    width: 100%;
+    text-align: center;
+  }
 }
